@@ -1,0 +1,47 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 4rem;
+    font-family: cursive;
+    background-color: hsl(323, 21%, 16%);
+}
+
+.neon-button {
+    text-decoration: none;
+    color: hsl(317, 100%, 54%);
+    border: 6px solid hsl(317, 100%, 54%);
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    text-shadow: 0 0 0.125em hsl(317, 100%, 54%),0 0 0.125em white;
+    box-shadow: inset 0 0 0.5em hsl(317, 100%, 54%) ,0 0 0.5em hsl(317, 100%, 54%);
+    position: relative;
+}
+
+.neon-button::before {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: hsl(317, 100%, 54%);
+    transform: perspective(3em) rotatex(70deg);
+    filter: blur(1em);
+}
+
+.neon-button:active,
+.neon-button:hover {
+    background-color: hsl(317, 100%, 54%);
+    color: hsl(323, 21%, 16%);
+}
